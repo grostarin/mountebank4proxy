@@ -1,0 +1,30 @@
+{
+    "imposters": [
+        {
+            "port": 8080,
+            "protocol": "http",
+            "name": "oney_proxy",
+            "recordRequests": "true",
+            "defaultResponse": {
+                "statusCode": 400,
+                "body": "Bad Request",
+                "headers": {}
+            },
+            "stubs": [
+                {
+                    "responses": [
+                        {
+                            "proxy": {
+                                "to": "MOUNTEBANK_PROXY_TO_TO_REPLACE",
+                                "addWaitBehavior": "true",
+                                "injectHeaders": {
+                                    "Accept-Encoding": "identity"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
