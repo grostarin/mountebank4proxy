@@ -27,6 +27,9 @@ docker build --rm -t mountebank4proxy:latest <THIS_PROJECT_DIR>
 docker run --name mountebank4proxy --restart always -d \
 -p 2525:2525 \
 -p 8080:8080 \
+-e http_proxy=*** \
+-e https_proxy=*** \
+-e no_proxy=*** \
 -e MOUNTEBANK_PROXY_TO=<URL_OF_WEBSERVICE_PROXIED> \
 <IMAGE_NAME>:<IMAGE_TAG>
 ```

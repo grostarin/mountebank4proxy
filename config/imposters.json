@@ -19,7 +19,8 @@
                                 "addWaitBehavior": "true",
                                 "injectHeaders": {
                                     "Accept-Encoding": "identity"
-                                }
+                                },
+                                "mode": "proxyAlways"
                             }
                         }
                     ]
